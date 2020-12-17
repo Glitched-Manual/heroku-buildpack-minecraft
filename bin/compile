@@ -74,6 +74,9 @@ elif echo "$minecraft_version" | grep -q '^1\.13.*$'; then
 elif echo "$minecraft_version" | grep -q '^1\.14.*$'; then
   minecraft_uuid="${MINECRAFT_UUID:="d0d0fe2b1dc6ab4c65554cb734270872b72dadd6"}"
   minecraft_url="https://launcher.mojang.com/v1/objects/${minecraft_uuid}/server.jar"
+elif echo "$minecraft_version" | grep -q '^1\.12.2$'; then
+  minecraft_uuid="${MINECRAFT_UUID:="886945bfb2b978778c3a0288fd7fab09d315b25f"}"
+  minecraft_url="https://launcher.mojang.com/v1/objects/${minecraft_uuid}/server.jar"
 else
   minecraft_url="https://s3.amazonaws.com/Minecraft.Download/versions/${minecraft_version}/minecraft_server.${minecraft_version}.jar"
 fi
